@@ -17,19 +17,20 @@ aqt: https://portal.us-west-2.amazon-aqt.com/
 ford: https://artisan.ford.com/
 ---
 
-<img style="max-width: 100%; height: auto;" align="right" src="{{ page.headshot_path }}" width=225>
 
-<div align="left">
-  <h1>{{ site.author.name }}</h1>
-  <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br><br>
-  <a href="https://www.github.com/{{ site.author.github }}/">GitHub</a>,
-  <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a><br>
-  <a href="{{ page.resume_path }}">Curriculum Vitae</a>
+<div style="display: flex; justify-content: space-between;">
+  <div>
+    <h1 style="margin: 0;">{{ site.author.name }}</h1>
+      <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a><br><br>
+      <a href="https://www.github.com/{{ site.author.github }}/">GitHub</a>,
+      <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}/">LinkedIn</a><br>
+      <a href="{{ page.resume_path }}">Curriculum Vitae</a>
+  </div>
+  <img style="max-width: 100%; height: auto;" src="{{ page.headshot_path }}" width=225>
 </div>
 
-<br><br>
-
-***
+<br>
+<hr>
 
 ## <ins>**About**</ins>
 I am an incoming first year M.S. student in Computer Science at Duke University.
@@ -39,7 +40,8 @@ I worked with [Daniel Balasubramanian](https://www.isis.vanderbilt.edu/team/71) 
 [Institute for Software Integrated Systems](https://www.isis.vanderbilt.edu/), where I developed security enhancements for legacy UAV
 software.
 
-***
+<br>
+<hr>
 
 ## <ins>**Work Experience**</ins>
 
@@ -64,7 +66,8 @@ Software Engineer Intern, [AWS EMR]({{ page.emr }})
 <p style="float: right;">June 2022 - Aug. 2022</p>
 Software Engineer Intern, [Software Excellence]({{ page.ford }})
 
-***
+<br>
+<hr>
 
 ## <ins>**Teaching Experience**</ins>
 
