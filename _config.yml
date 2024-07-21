@@ -1,0 +1,14 @@
+# Setup
+title: casc.io
+tagline:             
+description: ''
+baseurl: ''
+pagination: 5
+permalink: pretty
+
+# About/contact
+author:
+  name: Andrew Cascio
+  email: andrew.cascio@duke.edu
+  github: casciand
+  linkedin: andrew-cascio
