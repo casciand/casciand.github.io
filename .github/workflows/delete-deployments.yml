@@ -1,0 +1,29 @@
+on:
+  push:
+
+jobs:
+  delete-deployments:
+    runs-on: ubuntu-latest
+    permissions:
+      deployments: write
+      contents: read
+
+    steps:
+      - name: Get all deployments for github-pages environment
+        id: get-deployments
+        run: |
+          DEPLOYMENTS=$(gh api repos/${{ github.repository }}/deployments \
+            --jq '.[] | select(.environment == "github-pages") | .id' | tr '\n' ' ')
+          echo "deployments=$DEPLOYMENTS" >> $GITHUB_OUTPUT
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Delete deployments
+        if: steps.get-deployments.outputs.deployments != ''
+        run: |
+          for ID in ${{ steps.get-deployments.outputs.deployments }}; do
+            echo "Deleting deployment $ID"
+            gh api repos/${{ github.repository }}/deployments/$ID -X DELETE
+          done
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

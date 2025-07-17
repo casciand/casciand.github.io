@@ -1,0 +1,14 @@
+hr {
+  height: 1px;
+  line-height: 1px;
+  margin-top: 1em;
+  padding-bottom: 1em;
+  border: none;
+  background: transparent url(../../assets/hr.png) 50% 0 no-repeat;
+}
+
+@media (max-width: 607px) {
+    img {
+      display: none;
+    }
+}
